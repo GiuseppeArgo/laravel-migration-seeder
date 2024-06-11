@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_trains', function (Blueprint $table) {
+        Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('codice_treno');
             $table->string('azienda');
@@ -46,6 +46,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('table_trains');
+        Schema::dropIfExists('trains');
     }
 };
